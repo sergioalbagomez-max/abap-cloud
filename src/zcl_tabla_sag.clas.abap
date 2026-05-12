@@ -19,10 +19,14 @@ ENDCLASS.
 CLASS zcl_tabla_sag IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 
+  DATA lv_nombre TYPE ZDE_NOMBRE_SAG.
+  DATA lv_edad TYPE ZDE_EDAD_SAG.
+
+  lv_edad = 2.
 
   TYPES : BEGIN OF ty_persona,
-           nombre TYPE string,
-           edad TYPE i,
+           nombre TYPE ZDE_NOMBRE_SAG,
+           edad TYPE ZDE_EDAD_SAG,
            telefono TYPE string,
            email TYPE string,
            END OF ty_persona.
